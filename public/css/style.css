@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* navbar */
+
+#navbar {
+    background-color: crimson;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+}
+
+#navbar h1 {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+}
+
+#navbar h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* task */
+
+.task-list {
+    max-width: 350px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 .8em;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: .4em;
+    max-width: 100%;
+    margin-bottom: .8em;
+    border-bottom: 1px solid #ccc;
+}
+
+.task-list .title {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: crimson;
+}
+
+.task-list .complete-task {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #c8c8c8;
+    text-decoration: line-through;
+}
+
+.task-list .actions .read {
+    color: blue;
+}
+
+.task-list .actions .edit {
+    color: rgb(194, 194, 106);
+}
+
+.task-list .actions .delete {
+    color: red;
+}
+
+.task-list .actions .complete {
+    color: green;
+}
+
+.task-list .actions form {
+    display: inline;
+}
+
+.task-list .actions button {
+    padding: 0;
+}
+
+.task-list .actions form button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+/* task add */
+
+h1 {
+    text-align: center;
+    margin: 1em 0;
+}
+
+form {
+    width: 450px;
+    margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+    form {
+        width: 340px;
+    }
+
+    .form {
+        padding: 0 .8em;
+    }
+}
+
+form .form-control {
+    display: flex;
+    flex-direction: column;
+    margin-top: .6em;
+    gap: .3em;
+}
+
+form .form-control label {
+    font-weight: bold;
+}
+
+form .form-control input[type='text'],  form .form-control textarea{
+    padding: .5em 1em;
+}
+
+form .form-control textarea {
+    height: 100px;
+    resize: none;
+}
+
+form input[type='submit'] {
+    margin-top: 1em;
+    padding: .5em 1em;
+    width: 100%;
+    font-size: 1em;
+    color: white;
+    background-color: crimson;
+    border-radius: .4em;
+    border: none;
+}

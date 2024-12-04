@@ -1,0 +1,31 @@
+<h1>tasks</h1>
+
+<ul class="task-list">
+    {{#each tasks}}
+    <li>
+        {{#if this.done}}
+            <span class="complete-task">{{this.title}}</span>
+        {{else}}
+            <span class="title">{{this.title}}</span>
+        {{/if}}
+
+        <div class="actions">
+            <a href="/tasks/view/{{this.id}}"><span class="material-symbols-outlined read">read_more</span></a>
+            <a href="/tasks/edit/{{this.id}}"><span class="material-symbols-outlined edit">edit</span></a>
+            <form action="/tasks/updatestatus" method="post">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <input type="hidden" name="done" value="{{this.done}}">
+                <button type="submit">
+                    <span class="material-symbols-outlined complete">check_circle</span>
+                </button>
+            </form>
+            <form action="/tasks/remove" method="post">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <button type="submit">
+                    <span class="material-symbols-outlined delete">close</span>
+                </button>
+            </form>
+        </div>
+    </li>
+    {{/each}}
+</ul>
