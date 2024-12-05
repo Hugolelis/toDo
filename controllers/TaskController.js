@@ -1,3 +1,4 @@
+import { where } from "sequelize";
 import { Task } from "../models/Task.js";
 
 export class TaskController {
@@ -68,7 +69,9 @@ export class TaskController {
 
     static async showTasks(req, res) {
         const tasks = await Task.findAll({raw: true})
+        const taskCount = await Task.count()
+        const taskDone = await Task.count({where: {done: true}})
 
-        res.render('tasks/all', { tasks })
+        res.render('tasks/all', { tasks, taskCount, taskDone})
     }
 }
