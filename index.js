@@ -18,6 +18,8 @@ app.use(
 app.use(express.static('public'))
 app.use(express.json())
 
+import { Task } from "../models/Task.js";
+
 app.use('/tasks', taskRoutes)
 
 app.get('/', (req, res) => {
