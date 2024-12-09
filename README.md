@@ -31,5 +31,9 @@ cd toDo
 
 ### 3 - Instale as dependências:
 ```bash
-npm i
+npm install
+```
+### 4 - Startar o projeto:
+```bash
+npm start
 ```
