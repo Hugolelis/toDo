@@ -33,7 +33,7 @@ cd toDo
 ```bash
 npm install
 ```
-### 4 - Startar o projeto:
+### 4 - Execução:
 ```bash
 npm start
 ```
